@@ -10,16 +10,15 @@ jobs:
   run_python_files:
     runs-on: ubuntu-latest
     strategy:
-      matrix: 
+      matrix:
         python-version: ["3.7"]
-    
+
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{matrix.python-version}}
-    - uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Run Shell file
-      run: sh execute_files.sh
-      shell: bash
-            
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{matrix.python-version}}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run Shell file
+        run: sh execute_files.sh
+        shell: bash
