@@ -28,5 +28,4 @@ node15.right = node7
 # root.right = node20
 # node20.left=node15
 # node20.right=node7
-
-assert maxDepth(root=root) == 3, "Incorrect depth using DFS recursion"
+assert maxDepth(root=root) == 4, "Incorrect depth using DFS recursion"

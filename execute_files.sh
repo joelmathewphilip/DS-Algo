@@ -1,9 +1,12 @@
-cd Problems
-count = 0
-for file in *.py;
+#!/bin/bash
+counter=0
+#files=$(find | grep '.py')
+#echo $files
+for file in $(find | grep '.py');
     do
+        echo "Running file $file..."
         python "$file"
-        count = $((count + 1))
-    done
+        counter=$((counter + 1))
+    done;
 
-echo "Executed $count python files successfully"
+echo "Executed $counter python files successfully"

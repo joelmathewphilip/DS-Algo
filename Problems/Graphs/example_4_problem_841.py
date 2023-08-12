@@ -1,15 +1,15 @@
-# There are n rooms labeled from 0 to n - 1 and all the rooms are locked except for room 0. 
-# Your goal is to visit all the rooms. 
+# There are n rooms labeled from 0 to n - 1 and all the rooms are locked except for room 0.
+# Your goal is to visit all the rooms.
 # However, you cannot enter a locked room without having its key.
 
-# When you visit a room, you may find a set of distinct keys in it. 
+# When you visit a room, you may find a set of distinct keys in it.
 # Each key has a number on it, denoting which room it unlocks, and you can take all of them with you to unlock the other rooms.
 
-# Given an array rooms where rooms[i] is the set of keys that you can obtain if you visited room i, 
+# Given an array rooms where rooms[i] is the set of keys that you can obtain if you visited room i,
 # return true if you can visit all the rooms, or false otherwise.
 
 
-#Solution:
+# Solution:
 # Use DFS or BFS to solve this problem.
 # DFS solution:
 # 1) Our entry point is 0. So we will call DFS function with node = 0
@@ -24,15 +24,17 @@
 class Solution:
     def canVisitAllRooms(self, rooms) -> bool:
         def DFS(node):
-            for i in range(0,len(rooms[node])):
+            for i in range(0, len(rooms[node])):
                 if rooms[node][i] not in visited:
                     visited.add(rooms[node][i])
                     DFS(rooms[node][i])
             return visited
-        visited={0}
+        visited = {0}
         DFS(0)
         return len(visited) == len(rooms)
 
 
 obj = Solution()
-print(obj.canVisitAllRooms(rooms=[[1,3],[3,0,1],[2],[0]]))
+# print(obj.canVisitAllRooms(rooms=[[1, 3], [3, 0, 1], [2], [0]]))
+assert obj.canVisitAllRooms(
+    rooms=[[1, 3], [3, 0, 1], [2], [0]]) == False, "Error Executing Problem 841"
