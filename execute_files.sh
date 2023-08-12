@@ -1,8 +1,9 @@
+cd Problems
 count = 0
-for file in "Problems/*"
-do
-python $file
-count = $((count + 1))
-done
+for file in *.py;
+    do
+        python "$file"
+        count = $((count + 1))
+    done
 
 echo "Executed $count python files successfully"
