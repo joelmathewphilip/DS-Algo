@@ -36,4 +36,4 @@ grid = [[0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]]
 
-assert obj.maxAreaOfIsland(grid=grid) == 6, "Incorrect Max Answer"
+assert obj.maxAreaOfIsland(grid=grid) == 7, "Incorrect Max Answer"

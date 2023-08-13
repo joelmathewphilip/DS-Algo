@@ -24,4 +24,5 @@ for value in "${failedFileNames[@]}"
 do
 echo $value
 done
+exit 1
 fi
