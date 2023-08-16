@@ -16,6 +16,7 @@ class Solution:
                 new_col = col + col_difference
                 if not (0 <= new_row <= max_row and 0 <= new_col <= max_col):
                     continue
+                # this check also prevents going through the same node over and over
                 if grid[new_row][new_col] != 0:
                     continue
                 yield (new_row, new_col)
