@@ -1,3 +1,4 @@
+from collections import defaultdict
 class Solution:
     def shortestAlternatingPaths(self, n, redEdges, blueEdges):
         redPath = defaultdict(list)
